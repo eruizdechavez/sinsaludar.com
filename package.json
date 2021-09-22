@@ -1,0 +1,23 @@
+{
+  "name": "sinsaludar.com",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "tailwindcss -i tailwind.css -o styles.css -m --watch",
+    "build": "tailwindcss -i tailwind.css -o styles.css -m"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eruizdechavez/sinsaludar.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eruizdechavez/sinsaludar.com/issues"
+  },
+  "homepage": "https://sinsaludar.com",
+  "devDependencies": {
+    "tailwindcss": "^2.2.15"
+  }
+}
