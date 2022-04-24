@@ -20,12 +20,8 @@ jobs:
         uses: appleboy/scp-action@v0.1.1
         with:
           host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          source: .htaccess,index.html,styles.css
-          target: /home/${{ secrets.USERNAME }}/sinsaludar.com
-      - name: Cloudflare Purge Cache
-        uses: jakejarvis/cloudflare-purge-action@v0.3.0
-        env:
-          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}          
-          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
+          key: ${{ secrets.KEY }}
+          source: index.html,styles.css
+          target: ${{ secrets.TARGET }}
