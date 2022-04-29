@@ -24,3 +24,4 @@ jobs:
           port: ${{ secrets.PORT }}
           ssh_private_key: ${{ secrets.KEY }}
           remote_path: ${{ secrets.TARGET }}
+          sftp_only: true
