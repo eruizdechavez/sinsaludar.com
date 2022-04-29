@@ -23,5 +23,6 @@ jobs:
           server: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
           ssh_private_key: ${{ secrets.KEY }}
-          remote_path: "/html/sinsaludar.com"
+          local_path: './dist/*'
+          remote_path: '/html/sinsaludar.com'
           sftp_only: true

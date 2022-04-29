@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "browserslist": "npx browserslist@latest --update-db -y",
+    "build": "npm run clean && npm run browserslist && npm run tailwind && npm run copy",
+    "clean": "rm -rf dist && mkdir dist",
+    "copy": "cp index.html dist/",
     "start": "tailwindcss -i tailwind.css -o styles.css -m --watch",
-    "build": "tailwindcss -i tailwind.css -o styles.css -m"
+    "tailwind": "tailwindcss -i tailwind.css -o dist/styles.css --minify"
   },
   "repository": {
     "type": "git",
