@@ -17,12 +17,13 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - name: Deploy site
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.2
+        uses: milanmk/actions-file-deployer@master
         with:
-          username: ${{ secrets.USERNAME }}
-          server: ${{ secrets.HOST }}
-          port: ${{ secrets.PORT }}
-          ssh_private_key: ${{ secrets.KEY }}
-          local_path: './dist/*'
-          remote_path: '/html/sinsaludar.com'
-          sftp_only: true
+          remote-protocol: 'sftp'
+          remote-host: ${{ secrets.HOST }}
+          remote-port: ${{ secrets.PORT }}
+          remote-user: ${{ secrets.USERNAME }}
+          ssh-private-key: ${{ secrets.KEY }}
+          sync: full
+          local-path: ./dist/
+          remote-path: /html/sinsaludar.com
